@@ -3,6 +3,7 @@ import requests
 import streamlit as st
 from PIL import Image
 import numpy as np
+import os
 
 logo = Image.open('logo.png')
 
@@ -32,7 +33,7 @@ if provider == 'Udemy':
     
     headers = {
   "Accept": "application/json, text/plain, */*",
-  "Authorization": f"{secrets.UDEMY_AUTH}",
+  "Authorization": f"{os.environ.get('AUTHORIZATION')}",
   "Content-Type": "application/json;charset=utf-8"}
     
     base_url = 'https://www.udemy.com/api-2.0/courses/?page=1&page_size=1000'
