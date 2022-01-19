@@ -3,7 +3,6 @@ import requests
 import streamlit as st
 from PIL import Image
 import numpy as np
-import os
 
 logo = Image.open('logo.png')
 
@@ -33,7 +32,7 @@ if provider == 'Udemy':
     
     headers = {
   "Accept": "application/json, text/plain, */*",
-  "Authorization": f"{os.environ.get('AUTHORIZATION')}",
+  "Authorization": f"Basic VTdsV0gxTUZBOGdzRmR5b2dyanE4SkxNMDl4UGlUNVpVNzFIUGtRdTpyQUFZUnViaUZSQUVIYUxxVGFuTFVSUWQ1OURXcGtiQlBZanAxdTR1OEIzdFVCSkFpQ0t6QlNTNFpQZWpvRjBvSlh2T05VbnVxcXh2emR6UDhkOG0xSlJiZk1UNmpsVXJHMEgzcXVnRmt2RmtmTmpCc0JrdUpjb09pQ29nVmFoRQ==",
   "Content-Type": "application/json;charset=utf-8"}
     
     base_url = 'https://www.udemy.com/api-2.0/courses/?page=1&page_size=1000'
