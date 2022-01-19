@@ -1,5 +1,0 @@
-- name: run tests
-  env:
-    AUTHORIZATION: ${{ secrets.UDEMY_AUTH }}
-  run: python insightbigschool.py
-    
